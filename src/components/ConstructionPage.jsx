@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Coins, Calendar, Bell, Twitter, Send, MapPin } from 'lucide-react';
+import { Coins, Calendar, Bell, Instagram, Send, MapPin } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-// ─── Mailchimp vía JSONP (sin backend, funciona con npm run dev) ───
-const MAILCHIMP_URL =
-  'https://gmail.us12.list-manage.com/subscribe/post-json?u=88b29d5e90032b558d0f0fb95&id=0966db89bf&f_id=0009c4e1f0';
+// ─── Mailchimp vía JSONP ───
+const MAILCHIMP_URL = import.meta.env.VITE_MAILCHIMP_URL;
 
 const subscribeToMailchimp = (email) => {
   return new Promise((resolve, reject) => {
     const callbackName = 'mc_callback_' + Date.now();
-    const url = `${MAILCHIMP_URL}&EMAIL=${encodeURIComponent(email)}&c=${callbackName}`;
+    const url = `${MAILCHIMP_URL}&EMAIL=${encodeURIComponent(email)}&tags=bitcoin-week&c=${callbackName}`;
 
     const script = document.createElement('script');
     script.src = url;
@@ -106,8 +105,13 @@ const ConstructionPage = () => {
             animate={{ rotateY: 360 }}
             transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
             className="icon-container"
+            style={{ perspective: 1000 }}
           >
-            <Coins />
+            <img
+              src="/logoBitcoinWeek.png"
+              alt="Bitcoin Week Logo"
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            />
           </motion.div>
 
           <motion.h1
@@ -131,7 +135,7 @@ const ConstructionPage = () => {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#aaa', fontSize: '14px' }}>
               <Calendar size={14} />
-              <span>18 – 22 de Mayo, 2025</span>
+              <span>18 – 24 de Mayo, 2025</span>
             </div>
           </motion.div>
 
@@ -202,11 +206,21 @@ const ConstructionPage = () => {
           )}
 
           <div className="social-links">
-            <a href="#" className="social-link">
-              <Twitter size={16} />
-              Twitter
+            <a 
+              href="https://www.instagram.com/bitcoinweekuy" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="social-link"
+            >
+              <Instagram size={16} />
+              Instagram
             </a>
-            <a href="#" className="social-link">
+            <a 
+              href="https://www.google.com/calendar/render?action=TEMPLATE&text=Bitcoin%20Week%20Montevideo%202025&dates=20250518/20250525&details=El%20evento%20de%20Bitcoin%20m%C3%A1s%20esperado%20de%20Latinoam%C3%A9rica.%20%C3%9Anate%20a%20nosotros%20en%20Montevideo%20para%20redefinir%20el%20futuro%20de%20las%20finanzas.&location=Montevideo%2C%20Uruguay" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="social-link"
+            >
               <Calendar size={16} />
               Guardar Fecha
             </a>
