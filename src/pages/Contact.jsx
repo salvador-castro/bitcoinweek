@@ -72,12 +72,12 @@ export default function Contact() {
                             <FadeIn>
                                 <div style={{ marginBottom: 44 }}>
                                     <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 30, marginBottom: 18, letterSpacing: '0.04em', color: 'var(--text-primary)' }}>CONTACTO DIRECTO</h2>
-                                    <a href="mailto:hola@bitcoinweekuruguay.com"
+                                    <a href="mailto:info@plugin.uy"
                                         style={{ display: 'flex', alignItems: 'center', gap: 10, color: 'var(--btc)', fontSize: 13, fontWeight: 500 }}
                                         onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
                                         onMouseLeave={e => e.currentTarget.style.opacity = '1'}
                                     >
-                                        <Mail size={15} /> hola@bitcoinweekuruguay.com
+                                        <Mail size={15} /> info@plugin.uy
                                     </a>
                                 </div>
                             </FadeIn>
