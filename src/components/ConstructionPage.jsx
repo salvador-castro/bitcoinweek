@@ -92,7 +92,7 @@ const FLOATERS = [
 ];
 
 const STATS = [
-  { val: 7, suffix: ' días', label: 'de evento' },
+  { val: 7, suffix: ' días', label: 'de eventos' },
   { val: 100, suffix: '%', label: 'bitcoin only' },
   { val: 1, suffix: '\u00aa', label: 'edición' },
 ];
@@ -228,8 +228,8 @@ const ConstructionPage = () => {
           transition={{ delay: 0.5 }}
           style={styles.description}
         >
-          El evento de Bitcoin más esperado de Latinoamérica está tomando forma.
-          Únete a nosotros en Montevideo para redefinir el futuro de las finanzas.
+          La agenda más relevante de eventos Bitcoin en LATAM está tomando forma,
+          promoviendo el intercambio de conocimiento y la innovación financiera.
         </motion.p>
 
         {/* Stats */}
