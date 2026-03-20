@@ -265,6 +265,13 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ opacity: { duration: 0.9, delay: 0.15 } }}
               className="hero-logo"
+              style={{
+                flexShrink: 0,
+                perspective: "800px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               <motion.img
                 src="/logoBitcoinWeek-Logo.png"
