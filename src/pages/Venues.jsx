@@ -1,3 +1,5 @@
+// src/pages/Venues.jsx
+
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { MapPin, Clock, ExternalLink, Calendar } from "lucide-react";

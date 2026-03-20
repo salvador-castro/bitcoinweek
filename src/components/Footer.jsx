@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { Twitter, Instagram, Youtube, Mail } from "lucide-react";
@@ -24,7 +25,7 @@ const SOCIALS = [
   },
   {
     icon: <Youtube size={15} />,
-    href: "https://youtube.com/@bitcoinweekuy",
+    href: "https://www.youtube.com/@bitcoinuruguay",
     label: "YouTube",
   },
 ];

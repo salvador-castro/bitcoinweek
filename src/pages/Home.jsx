@@ -1,3 +1,5 @@
+// src/pages/Home.jsx
+
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -277,7 +279,7 @@ export default function Home() {
               }}
             >
               <motion.img
-                src="/logoBitcoinWeek-Logo.png"
+                src="/logoBitcoinWeek-All.png"
                 alt="Bitcoin Week Uruguay"
                 animate={{ rotateY: [0, 360] }}
                 transition={{

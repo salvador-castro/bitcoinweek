@@ -1,3 +1,5 @@
+// src/pages/Agenda.jsx
+
 import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Calendar, MapPin, Mic, ChevronDown, ChevronUp } from "lucide-react";
