@@ -395,19 +395,21 @@ img {
 
   /* ── Hero ── */
 
-  /* Logo: se mueve encima del heading, más pequeño */
+  /* Logo: a la derecha del heading, en fila */
   .hero-heading-row {
-    flex-direction: column-reverse; /* logo arriba, heading abajo */
-    align-items: flex-start;
-    gap: 16px;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
   }
 
   .hero-heading {
-    font-size: clamp(72px, 22vw, 130px);
+    font-size: clamp(44px, 15vw, 80px);
+    flex: 1;
   }
 
   .hero-logo {
-    width: clamp(80px, 28vw, 140px); /* reducido para no desbordar */
+    width: clamp(70px, 20vw, 110px);
+    flex-shrink: 0;
     perspective: 400px;
   }
 
