@@ -259,6 +259,7 @@ export default function Speakers() {
       <section className="section" style={{ background: "var(--black)" }}>
         <div className="container">
           <div
+            className="speakers-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fill, minmax(260px,1fr))",

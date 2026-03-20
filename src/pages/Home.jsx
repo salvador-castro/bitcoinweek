@@ -95,7 +95,6 @@ function Counter({ to, suffix = "" }) {
   );
 }
 
-/* Sponsor tiers */
 const SPONSORS = [
   { name: "SPONSOR ORO", tier: "gold" },
   { name: "SPONSOR ORO", tier: "gold" },
@@ -209,6 +208,7 @@ export default function Home() {
               alignItems: "center",
               gap: 14,
               marginBottom: 28,
+              flexWrap: "wrap",
             }}
           >
             <div className="tag">
@@ -227,19 +227,13 @@ export default function Home() {
             </span>
           </motion.div>
 
-          {/* Main heading */}
-          <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+          {/* Heading + logo */}
+          <div className="hero-heading-row">
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9, delay: 0.15 }}
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(80px, 18vw, 210px)",
-                lineHeight: 0.88,
-                letterSpacing: "0.01em",
-                marginBottom: 0,
-              }}
+              className="hero-heading"
             >
               <span style={{ display: "block", color: "var(--text-primary)" }}>
                 BITCOIN
@@ -269,30 +263,16 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ opacity: { duration: 0.9, delay: 0.15 } }}
-              style={{
-                flexShrink: 0,
-                perspective: 800,
-                width: "clamp(220px, 28vw, 420px)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="hero-logo"
             >
               <motion.img
-                src="/logoBitcoinWeek-All.png"
+                src="/logoBitcoinWeek-Logo.png"
                 alt="Bitcoin Week Uruguay"
                 animate={{ rotateY: [0, 360] }}
                 transition={{
-                  rotateY: {
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "linear",
-                  },
+                  rotateY: { duration: 6, repeat: Infinity, ease: "linear" },
                 }}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
+                style={{ width: "100%", height: "auto" }}
               />
             </motion.div>
           </div>
@@ -418,14 +398,7 @@ export default function Home() {
         }}
       >
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4,1fr)",
-              gap: 1,
-              background: "var(--border)",
-            }}
-          >
+          <div className="stats-grid">
             {[
               { num: 7, suffix: " días", label: "De evento" },
               { num: 20, suffix: "+", label: "Speakers" },
@@ -464,16 +437,9 @@ export default function Home() {
       {/* ═══ MANIFIESTO ══════════════════════════════════════════════ */}
       <section className="section" style={{ background: "var(--black)" }}>
         <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1.6fr",
-              gap: 80,
-              alignItems: "start",
-            }}
-          >
+          <div className="manifesto-grid">
             {/* Left sticky label */}
-            <div style={{ position: "sticky", top: 120 }}>
+            <div className="manifesto-sticky">
               <FadeIn>
                 <div className="section-label">Manifiesto</div>
                 <h2 className="section-title">
@@ -612,7 +578,7 @@ export default function Home() {
             <p
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(32px, 6vw, 64px)",
+                fontSize: "clamp(28px, 5vw, 64px)",
                 color: "var(--black)",
                 lineHeight: 1.05,
                 maxWidth: 860,
@@ -649,15 +615,7 @@ export default function Home() {
               ESPERA
             </h2>
           </FadeIn>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3,1fr)",
-              gap: 1,
-              marginTop: 48,
-              background: "var(--border)",
-            }}
-          >
+          <div className="pillars-grid" style={{ marginTop: 48 }}>
             {[
               {
                 icon: <Mic size={22} />,
@@ -774,14 +732,7 @@ export default function Home() {
             >
               — Oro —
             </p>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2,1fr)",
-                gap: 12,
-                marginBottom: 40,
-              }}
-            >
+            <div className="sponsors-gold" style={{ marginBottom: 40 }}>
               {SPONSORS.filter((s) => s.tier === "gold").map((sp, i) => (
                 <div
                   key={i}
@@ -828,14 +779,7 @@ export default function Home() {
             >
               — Plata —
             </p>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(3,1fr)",
-                gap: 10,
-                marginBottom: 28,
-              }}
-            >
+            <div className="sponsors-silver" style={{ marginBottom: 28 }}>
               {SPONSORS.filter((s) => s.tier === "silver").map((sp, i) => (
                 <div
                   key={i}
@@ -873,14 +817,7 @@ export default function Home() {
             >
               — Bronce —
             </p>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4,1fr)",
-                gap: 8,
-                marginBottom: 44,
-              }}
-            >
+            <div className="sponsors-bronze" style={{ marginBottom: 44 }}>
               {SPONSORS.filter((s) => s.tier === "bronze").map((sp, i) => (
                 <div
                   key={i}

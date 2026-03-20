@@ -97,10 +97,6 @@ export default function Venues() {
 
   const v = VENUES[active];
 
-  /* Build an embed URL that centers on the selected venue */
-  const mapSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=${v.mapQ}&zoom=15`;
-
-  /* Fallback embed without API key — uses simple iframe approach */
   const mapFallback = `https://maps.google.com/maps?q=${v.lat},${v.lng}&z=15&output=embed`;
 
   return (
@@ -147,6 +143,7 @@ export default function Venues() {
       <section className="section" style={{ background: "var(--black)" }}>
         <div className="container">
           <div
+            className="venues-grid"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1.3fr",

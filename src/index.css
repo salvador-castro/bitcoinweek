@@ -165,7 +165,6 @@ img {
     opacity: 1;
     transform: scale(1);
   }
-
   50% {
     opacity: 0.5;
     transform: scale(0.75);
@@ -201,9 +200,7 @@ img {
   border-radius: var(--radius);
   border: none;
   cursor: pointer;
-  transition:
-    opacity 0.2s,
-    transform 0.15s;
+  transition: opacity 0.2s, transform 0.15s;
 }
 
 .btn-primary:hover {
@@ -234,9 +231,7 @@ img {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   cursor: pointer;
-  transition:
-    border-color 0.2s,
-    color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .btn-ghost:hover {
@@ -286,44 +281,184 @@ img {
 }
 
 @keyframes ticker {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ─────────────────────────────────────────
    SCROLLBAR
 ───────────────────────────────────────── */
-::-webkit-scrollbar {
-  width: 6px;
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--black); }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--btc-line); }
+
+/* ─────────────────────────────────────────
+   HOME — HERO
+───────────────────────────────────────── */
+
+/* Desktop: heading + logo en fila */
+.hero-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--black);
+.hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 16vw, 210px);
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--surface-3);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--btc-line);
+.hero-logo {
+  flex-shrink: 0;
+  perspective: 800px;
+  width: clamp(180px, 24vw, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ─────────────────────────────────────────
-   RESPONSIVE HELPERS
+   HOME — GRIDS
+───────────────────────────────────────── */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.manifesto-sticky {
+  position: sticky;
+  top: 120px;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.sponsors-gold {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.sponsors-silver {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.sponsors-bronze {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — TABLET (≤ 1024px)
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .sponsors-bronze {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — MOBILE (≤ 768px)
 ───────────────────────────────────────── */
 @media (max-width: 768px) {
-  .section {
-    padding: 64px 0;
+
+  /* Base spacing */
+  .section   { padding: 56px 0; }
+  .container { padding: 0 18px; }
+
+  /* Typography scale */
+  .section-title { font-size: clamp(44px, 13vw, 72px); }
+  .stat-number   { font-size: clamp(36px, 10vw, 56px); }
+
+  /* ── Hero ── */
+
+  /* Logo: se mueve encima del heading, más pequeño */
+  .hero-heading-row {
+    flex-direction: column-reverse; /* logo arriba, heading abajo */
+    align-items: flex-start;
+    gap: 16px;
   }
 
-  .container {
-    padding: 0 20px;
+  .hero-heading {
+    font-size: clamp(72px, 22vw, 130px);
+  }
+
+  .hero-logo {
+    width: clamp(80px, 28vw, 140px); /* reducido para no desbordar */
+    perspective: 400px;
+  }
+
+  /* ── Home grids ── */
+  .stats-grid      { grid-template-columns: repeat(2, 1fr); }
+  .manifesto-grid  { grid-template-columns: 1fr; gap: 40px; }
+  .manifesto-sticky { position: static; }
+  .pillars-grid    { grid-template-columns: 1fr; }
+  .sponsors-gold   { grid-template-columns: 1fr; }
+  .sponsors-silver { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-bronze { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Nav (ya manejado en Nav.jsx) ── */
+  .desktop-nav { display: none !important; }
+  .hamburger-btn { display: flex !important; }
+  #nav-cta { display: none !important; }
+
+  /* ── Footer ── */
+  footer .container > div:first-of-type {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+
+  /* ── Contact ── */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* ── Venues ── */
+  .venues-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── Speakers ── */
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE — SMALL MOBILE (≤ 480px)
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .speakers-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-logo {
+    width: clamp(60px, 22vw, 100px);
   }
 }
