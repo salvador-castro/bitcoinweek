@@ -145,6 +145,7 @@ export default function Home() {
           flexDirection: "column",
           justifyContent: "flex-end",
           overflow: "hidden",
+          paddingTop: "var(--nav-h)",
           paddingBottom: 80,
         }}
       >
