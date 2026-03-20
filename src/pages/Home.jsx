@@ -226,40 +226,74 @@ export default function Home() {
           </motion.div>
 
           {/* Main heading */}
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(80px, 18vw, 210px)",
-              lineHeight: 0.88,
-              letterSpacing: "0.01em",
-              marginBottom: 0,
-            }}
-          >
-            <span style={{ display: "block", color: "var(--text-primary)" }}>
-              BITCOIN
-            </span>
-            <span
+          <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.9, delay: 0.15 }}
               style={{
-                display: "block",
-                color: "var(--btc)",
-                textShadow: "0 0 60px rgba(247,147,26,0.3)",
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(80px, 18vw, 210px)",
+                lineHeight: 0.88,
+                letterSpacing: "0.01em",
+                marginBottom: 0,
               }}
             >
-              WEEK
-            </span>
-            <span
+              <span style={{ display: "block", color: "var(--text-primary)" }}>
+                BITCOIN
+              </span>
+              <span
+                style={{
+                  display: "block",
+                  color: "var(--btc)",
+                  textShadow: "0 0 60px rgba(247,147,26,0.3)",
+                }}
+              >
+                WEEK
+              </span>
+              <span
+                style={{
+                  display: "block",
+                  WebkitTextStroke: "1px rgba(247,147,26,0.25)",
+                  color: "transparent",
+                }}
+              >
+                URUGUAY
+              </span>
+            </motion.h1>
+
+            {/* Logo giratorio */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ opacity: { duration: 0.9, delay: 0.15 } }}
               style={{
-                display: "block",
-                WebkitTextStroke: "1px rgba(247,147,26,0.25)",
-                color: "transparent",
+                flexShrink: 0,
+                perspective: 800,
+                width: "clamp(220px, 28vw, 420px)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              URUGUAY
-            </span>
-          </motion.h1>
+              <motion.img
+                src="/logoBitcoinWeek-Logo.png"
+                alt="Bitcoin Week Uruguay"
+                animate={{ rotateY: [0, 360] }}
+                transition={{
+                  rotateY: {
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "linear",
+                  },
+                }}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            </motion.div>
+          </div>
 
           {/* Sub */}
           <motion.div
