@@ -205,7 +205,7 @@ const ConstructionPage = () => {
         >
           <span style={styles.chip}>
             <MapPin size={13} strokeWidth={2.2} />
-            Montevideo, Uruguay
+            Colonia, Montevideo y Punta del Este, Uruguay
           </span>
           <span style={styles.chipMuted}>
             <Calendar size={13} strokeWidth={2.2} />
