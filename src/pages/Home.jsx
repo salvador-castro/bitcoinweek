@@ -95,15 +95,16 @@ function Counter({ to, suffix = "" }) {
   );
 }
 
-const SPONSORS = [
-  { name: "SPONSOR ORO", tier: "gold" },
-  { name: "SPONSOR ORO", tier: "gold" },
-  { name: "SPONSOR PLATA", tier: "silver" },
-  { name: "SPONSOR PLATA", tier: "silver" },
-  { name: "SPONSOR PLATA", tier: "silver" },
-  { name: "SPONSOR BRONCE", tier: "bronze" },
-  { name: "SPONSOR BRONCE", tier: "bronze" },
-  { name: "SPONSOR BRONCE", tier: "bronze" },
+const LOCAL_TIERS = [
+  { tier: "PRO", slots: 2, size: 2 },
+  { tier: "GROWTH", slots: 3, size: 1 },
+  { tier: "ENTRY", slots: 4, size: 0 },
+];
+
+const GLOBAL_TIERS = [
+  { tier: "MAIN SPONSOR", slots: 1, size: 2 },
+  { tier: "LEADER", slots: 2, size: 1 },
+  { tier: "BUILDER", slots: 2, size: 0 },
 ];
 
 export default function Home() {
@@ -697,13 +698,13 @@ export default function Home() {
         }}
       >
         <div className="container">
-          <div style={{ textAlign: "center", marginBottom: 60 }}>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
             <FadeIn>
               <div
                 className="section-label"
                 style={{ justifyContent: "center" }}
               >
-                Sponsors
+                Sponsorship
               </div>
               <h2 className="section-title">
                 QUIÉNES
@@ -725,124 +726,175 @@ export default function Home() {
             </FadeIn>
           </div>
 
-          {/* Gold */}
+          {/* GLOBAL */}
           <FadeIn>
-            <p
+            <div
               style={{
-                textAlign: "center",
-                fontFamily: "var(--font-mono)",
-                fontSize: 9,
-                letterSpacing: "0.22em",
-                color: "var(--btc)",
-                marginBottom: 20,
-                textTransform: "uppercase",
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginBottom: 32,
               }}
             >
-              — Oro —
-            </p>
-            <div className="sponsors-gold" style={{ marginBottom: 40 }}>
-              {SPONSORS.filter((s) => s.tier === "gold").map((sp, i) => (
-                <div
-                  key={i}
-                  style={{
-                    border: "1px dashed rgba(247,147,26,0.4)",
-                    borderRadius: "var(--radius-md)",
-                    padding: "52px 24px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-display)",
-                    fontSize: 22,
-                    letterSpacing: "0.1em",
-                    color: "rgba(247,147,26,0.55)",
-                    background: "rgba(247,147,26,0.03)",
-                    cursor: "pointer",
-                    transition: "background 0.2s",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.background = "rgba(247,147,26,0.07)")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.background = "rgba(247,147,26,0.03)")
-                  }
-                >
-                  {sp.name}
+              <div style={{ flex: 1, height: 1, background: "rgba(247,147,26,0.2)" }} />
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 13,
+                  letterSpacing: "0.3em",
+                  color: "rgba(247,147,26,0.85)",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                GLOBAL
+              </span>
+              <div style={{ flex: 1, height: 1, background: "rgba(247,147,26,0.2)" }} />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 12,
+                marginBottom: 52,
+              }}
+            >
+              {GLOBAL_TIERS.map((t, ti) => (
+                <div key={ti}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 11,
+                      letterSpacing: "0.25em",
+                      color: "rgba(247,147,26,0.65)",
+                      textTransform: "uppercase",
+                      marginBottom: 10,
+                    }}
+                  >
+                    {t.tier}
+                  </p>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: `repeat(${t.slots}, 1fr)`,
+                      gap: 10,
+                    }}
+                  >
+                    {Array.from({ length: t.slots }).map((_, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          border: `1px dashed rgba(247,147,26,${t.size === 2 ? "0.5" : t.size === 1 ? "0.35" : "0.22"})`,
+                          borderRadius: "var(--radius-md)",
+                          padding: t.size === 2 ? "64px 24px" : t.size === 1 ? "48px 20px" : "36px 16px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontFamily: "var(--font-display)",
+                          fontSize: t.size === 2 ? 26 : t.size === 1 ? 20 : 15,
+                          letterSpacing: "0.1em",
+                          color: `rgba(247,147,26,${t.size === 2 ? "0.6" : t.size === 1 ? "0.45" : "0.3"})`,
+                          background: `rgba(247,147,26,${t.size === 2 ? "0.04" : "0.02"})`,
+                          transition: "background 0.2s",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.currentTarget.style.background = `rgba(247,147,26,${t.size === 2 ? "0.09" : "0.05"})`)
+                        }
+                        onMouseLeave={(e) =>
+                          (e.currentTarget.style.background = `rgba(247,147,26,${t.size === 2 ? "0.04" : "0.02"})`)
+                        }
+                      >
+                        SPONSOR
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
           </FadeIn>
 
-          {/* Silver */}
+          {/* LOCAL */}
           <FadeIn delay={0.08}>
-            <p
+            <div
               style={{
-                textAlign: "center",
-                fontFamily: "var(--font-mono)",
-                fontSize: 9,
-                letterSpacing: "0.22em",
-                color: "rgba(180,180,180,0.5)",
-                marginBottom: 20,
-                textTransform: "uppercase",
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginBottom: 32,
               }}
             >
-              — Plata —
-            </p>
-            <div className="sponsors-silver" style={{ marginBottom: 28 }}>
-              {SPONSORS.filter((s) => s.tier === "silver").map((sp, i) => (
-                <div
-                  key={i}
-                  style={{
-                    border: "1px dashed rgba(180,180,180,0.2)",
-                    borderRadius: "var(--radius-md)",
-                    padding: "32px 16px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-display)",
-                    fontSize: 16,
-                    letterSpacing: "0.08em",
-                    color: "rgba(180,180,180,0.45)",
-                  }}
-                >
-                  {sp.name}
-                </div>
-              ))}
+              <div style={{ flex: 1, height: 1, background: "rgba(100,200,100,0.2)" }} />
+              <span
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  fontSize: 13,
+                  letterSpacing: "0.3em",
+                  color: "rgba(100,200,100,0.85)",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                LOCAL
+              </span>
+              <div style={{ flex: 1, height: 1, background: "rgba(100,200,100,0.2)" }} />
             </div>
-          </FadeIn>
-
-          {/* Bronze */}
-          <FadeIn delay={0.14}>
-            <p
+            <div
               style={{
-                textAlign: "center",
-                fontFamily: "var(--font-mono)",
-                fontSize: 9,
-                letterSpacing: "0.22em",
-                color: "rgba(140,90,40,0.55)",
-                marginBottom: 20,
-                textTransform: "uppercase",
+                display: "flex",
+                flexDirection: "column",
+                gap: 12,
+                marginBottom: 52,
               }}
             >
-              — Bronce —
-            </p>
-            <div className="sponsors-bronze" style={{ marginBottom: 44 }}>
-              {SPONSORS.filter((s) => s.tier === "bronze").map((sp, i) => (
-                <div
-                  key={i}
-                  style={{
-                    border: "1px dashed rgba(140,90,40,0.25)",
-                    borderRadius: "var(--radius-md)",
-                    padding: "20px 10px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-display)",
-                    fontSize: 12,
-                    letterSpacing: "0.06em",
-                    color: "rgba(160,100,50,0.5)",
-                  }}
-                >
-                  {sp.name}
+              {LOCAL_TIERS.map((t, ti) => (
+                <div key={ti}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 11,
+                      letterSpacing: "0.25em",
+                      color: "rgba(100,200,100,0.65)",
+                      textTransform: "uppercase",
+                      marginBottom: 10,
+                    }}
+                  >
+                    {t.tier}
+                  </p>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: `repeat(${t.slots}, 1fr)`,
+                      gap: 10,
+                    }}
+                  >
+                    {Array.from({ length: t.slots }).map((_, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          border: "1px dashed rgba(100,200,100,0.2)",
+                          borderRadius: "var(--radius-md)",
+                          padding: t.size === 2 ? "44px 16px" : t.size === 1 ? "32px 16px" : "22px 12px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontFamily: "var(--font-display)",
+                          fontSize: t.size === 2 ? 18 : t.size === 1 ? 14 : 11,
+                          letterSpacing: "0.08em",
+                          color: "rgba(100,200,100,0.25)",
+                          background: "rgba(100,200,100,0.02)",
+                          transition: "background 0.2s",
+                        }}
+                        onMouseEnter={(e) =>
+                          (e.currentTarget.style.background = "rgba(100,200,100,0.05)")
+                        }
+                        onMouseLeave={(e) =>
+                          (e.currentTarget.style.background = "rgba(100,200,100,0.02)")
+                        }
+                      >
+                        SPONSOR
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
