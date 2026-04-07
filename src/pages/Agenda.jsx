@@ -21,218 +21,50 @@ function FadeIn({ children, delay = 0 }) {
 
 const DAYS = [
   {
-    date: "18 May",
-    weekday: "Lunes",
-    theme: "Apertura",
-    color: "#F7931A",
-    events: [
-      {
-        time: "18:00",
-        title: "Ceremonia de Apertura",
-        type: "Keynote",
-        venue: "Sede principal · TBD",
-        speaker: "Organizadores Bitcoin Week UY",
-        desc: "Bienvenida oficial al evento y presentación de la semana.",
-      },
-      {
-        time: "19:30",
-        title: "Panel Inaugural: Bitcoin en Latinoamérica",
-        type: "Panel",
-        venue: "Sede principal · TBD",
-        speaker: "Múltiples ponentes",
-        desc: "Estado del ecosistema Bitcoin en la región y perspectivas para 2026.",
-      },
-    ],
-  },
-  {
-    date: "19 May",
-    weekday: "Martes",
-    theme: "Tecnología",
-    color: "#c47314",
-    events: [
-      {
-        time: "10:00",
-        title: "Taller: Lightning Network desde cero",
-        type: "Workshop",
-        venue: "Sede técnica · TBD",
-        speaker: "TBD",
-        desc: "Introducción práctica al protocolo Lightning y cómo correr un nodo.",
-      },
-      {
-        time: "14:00",
-        title: "Charla: Bitcoin y privacidad",
-        type: "Charla",
-        venue: "Sede técnica · TBD",
-        speaker: "TBD",
-        desc: "Herramientas y buenas prácticas para preservar la privacidad en transacciones.",
-      },
-      {
-        time: "17:00",
-        title: "Mesa redonda: Custodia y self-custody",
-        type: "Panel",
-        venue: "Sede técnica · TBD",
-        speaker: "Múltiples ponentes",
-        desc: "No tus llaves, no tus bitcoins. Mejores prácticas de custodia.",
-      },
-    ],
-  },
-  {
-    date: "20 May",
-    weekday: "Miércoles",
-    theme: "Economía",
-    color: "#F7931A",
-    events: [
-      {
-        time: "10:00",
-        title: "Bitcoin como reserva de valor",
-        type: "Charla",
-        venue: "Sede económica · TBD",
-        speaker: "TBD",
-        desc: "Análisis del Bitcoin como activo de largo plazo en un mundo inflacionario.",
-      },
-      {
-        time: "13:00",
-        title: "Bitcoin y el sistema financiero uruguayo",
-        type: "Panel",
-        venue: "Sede económica · TBD",
-        speaker: "Múltiples ponentes",
-        desc: "Regulación, bancarización y convivencia con el sistema tradicional.",
-      },
-      {
-        time: "16:00",
-        title: "Caso de uso: empresas que aceptan Bitcoin en UY",
-        type: "Charla",
-        venue: "Sede económica · TBD",
-        speaker: "TBD",
-        desc: "Experiencias reales de negocios uruguayos que adoptaron Bitcoin.",
-      },
-    ],
-  },
-  {
     date: "21 May",
     weekday: "Jueves",
-    theme: "Comunidad",
+    theme: "Bienestar",
     color: "#c47314",
     events: [
       {
-        time: "10:00",
-        title: "Encuentro de comunidades",
-        type: "Networking",
-        venue: "Múltiples sedes",
-        speaker: "Comunidades Bitcoin UY",
-        desc: "Espacio libre para que las distintas comunidades del ecosistema se encuentren.",
-      },
-      {
-        time: "14:00",
-        title: "Bitcoin para el público general",
-        type: "Charla",
-        venue: "Sede comunitaria · TBD",
-        speaker: "TBD",
-        desc: "Introducción accesible a Bitcoin sin tecnicismos.",
-      },
-      {
-        time: "18:00",
-        title: "Social: Bitcoin Pizza Night",
-        type: "Social",
-        venue: "TBD",
+        time: "17:00",
+        title: "Wellness Bitcoin Day",
+        type: "Otro",
+        venue: "Colonia del Sacramento · Club Yatching y Pesca",
         speaker: "",
-        desc: "Celebración del Bitcoin Pizza Day con pizza y conversación.",
-      },
-    ],
-  },
-  {
-    date: "22 May",
-    weekday: "Viernes",
-    theme: "Comunidad",
-    color: "#c47314",
-    events: [
-      {
-        time: "10:00",
-        title: "Encuentro de comunidades",
-        type: "Networking",
-        venue: "Múltiples sedes",
-        speaker: "Comunidades Bitcoin UY",
-        desc: "Espacio libre para que las distintas comunidades del ecosistema se encuentren.",
-      },
-      {
-        time: "14:00",
-        title: "Bitcoin para el público general",
-        type: "Charla",
-        venue: "Sede comunitaria · TBD",
-        speaker: "TBD",
-        desc: "Introducción accesible a Bitcoin sin tecnicismos.",
-      },
-      {
-        time: "18:00",
-        title: "Social: Bitcoin Pizza Night",
-        type: "Social",
-        venue: "TBD",
-        speaker: "",
-        desc: "Celebración del Bitcoin Pizza Day con pizza y conversación.",
+        desc: "Jornada de bienestar: Educación, armonización y nutrición. Educación sobre Bitcoin Week (@latamcriptomom), actividad de bienestar (@lorepassini), música armonizadora, alimentación saludable con tapeo @bymar y Networking con vistas del atardecer desde la terraza. Duración: 3 hs. Transmisión online disponible.",
       },
     ],
   },
   {
     date: "23 May",
     weekday: "Sábado",
-    theme: "Comunidad",
+    theme: "Social",
     color: "#c47314",
     events: [
       {
-        time: "10:00",
-        title: "Encuentro de comunidades",
-        type: "Networking",
-        venue: "Múltiples sedes",
-        speaker: "Comunidades Bitcoin UY",
-        desc: "Espacio libre para que las distintas comunidades del ecosistema se encuentren.",
-      },
-      {
-        time: "14:00",
-        title: "Bitcoin para el público general",
-        type: "Charla",
-        venue: "Sede comunitaria · TBD",
-        speaker: "TBD",
-        desc: "Introducción accesible a Bitcoin sin tecnicismos.",
-      },
-      {
-        time: "18:00",
-        title: "Social: Bitcoin Pizza Night",
-        type: "Social",
-        venue: "TBD",
+        time: "19:30",
+        title: "Wine & Bitcoin at Casa Lola",
+        type: "Otro",
+        venue: "Punta del Este · Casa Lola",
         speaker: "",
-        desc: "Celebración del Bitcoin Pizza Day con pizza y conversación.",
+        desc: "Degustación de vinos + charla Bitcoin. Una experiencia para ampliar el público objetivo y acercar Bitcoin a personas que aún no están vinculadas al ecosistema pero tienen interés en activos digitales. Duración: 2:30 hs.",
       },
     ],
   },
   {
     date: "24 May",
     weekday: "Domingo",
-    theme: "Bitcoin Pizza Day",
+    theme: "Side Event",
     color: "#F7931A",
     events: [
       {
-        time: "10:00",
-        title: "Historia del Bitcoin Pizza Day",
-        type: "Keynote",
-        venue: "Sede principal · TBD",
-        speaker: "TBD",
-        desc: "El día que 10.000 BTC valían dos pizzas. Retrospectiva y reflexión.",
-      },
-      {
-        time: "12:00",
-        title: "Panel: El futuro de Bitcoin en Uruguay",
-        type: "Panel",
-        venue: "Sede principal · TBD",
-        speaker: "Múltiples ponentes",
-        desc: "Qué queremos construir desde Uruguay para los próximos años.",
-      },
-      {
-        time: "17:00",
-        title: "Ceremonia de Cierre",
-        type: "Cierre",
-        venue: "Sede principal · TBD",
-        speaker: "Organizadores",
-        desc: "Conclusiones, agradecimientos y anuncio de la próxima edición.",
+        time: "15:00",
+        title: "Plugin 12 — Bitcoin Edition",
+        type: "Side event",
+        venue: "Montevideo · TBD",
+        speaker: "Maximiliano Pérez — Founder Plugin.uy",
+        desc: "Plugin integra en su grilla anual la narrativa Bitcoiner en su edición número 12. Un evento híbrido para conectar a la comunidad y magnificar el mensaje Bitcoin. Duración: 6 hs. Transmisión online disponible.",
       },
     ],
   },
@@ -246,6 +78,8 @@ const TYPE_COLOR = {
   Networking: "#F97316",
   Social: "#EC4899",
   Cierre: "#F7931A",
+  "Side event": "#8B5CF6",
+  Otro: "#14B8A6",
 };
 
 function AnimatedExpand({ open, children }) {
@@ -300,7 +134,7 @@ export default function Agenda() {
               }}
             >
               Cinco días de charlas, talleres, paneles y encuentros a lo largo
-              de Montevideo. El programa detallado se confirmará próximamente.
+              de Colonia, Montevideo y Punta del Este. El programa detallado se confirmará próximamente.
             </p>
           </FadeIn>
           <FadeIn delay={0.1}>
@@ -333,8 +167,7 @@ export default function Agenda() {
                   fontSize: 12,
                 }}
               >
-                <MapPin size={12} style={{ color: "var(--btc)" }} /> Montevideo,
-                Uruguay
+                <MapPin size={12} style={{ color: "var(--btc)" }} /> Colonia, Montevideo y Punta del Este, Uruguay
               </div>
             </div>
           </FadeIn>
@@ -462,14 +295,14 @@ export default function Agenda() {
                         : "1px solid var(--border)",
                     }}
                     onMouseEnter={(e) =>
-                      (e.currentTarget.style.borderColor = open
-                        ? tc
-                        : "var(--border-hot)")
+                    (e.currentTarget.style.borderColor = open
+                      ? tc
+                      : "var(--border-hot)")
                     }
                     onMouseLeave={(e) =>
-                      (e.currentTarget.style.borderColor = open
-                        ? tc
-                        : "var(--border)")
+                    (e.currentTarget.style.borderColor = open
+                      ? tc
+                      : "var(--border)")
                     }
                   >
                     {/* Row */}
