@@ -214,7 +214,7 @@ export default function Home() {
           >
             <div className="tag">
               <div className="tag-dot" />
-              Mayo 2026 · Montevideo
+              Mayo 2026 · Colonia, Montevideo y Punta del Este
             </div>
             <span
               style={{
@@ -322,7 +322,7 @@ export default function Home() {
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               {[
                 { icon: <Calendar size={13} />, text: "18–24 Mayo 2026" },
-                { icon: <MapPin size={13} />, text: "Montevideo, Uruguay" },
+                { icon: <MapPin size={13} />, text: "Colonia, Montevideo y Punta del Este, Uruguay" },
                 { icon: <Users size={13} />, text: "Comunidad abierta" },
               ].map((item, i) => (
                 <div
@@ -382,7 +382,7 @@ export default function Home() {
                 "Bitcoin Week Uruguay",
                 "18–22 Mayo 2026",
                 "Bitcoin Pizza Day",
-                "Montevideo, Uruguay",
+                "Colonia, Montevideo y Punta del Este, Uruguay",
                 "Comunidad Abierta",
                 "#BitcoinWeekUY",
                 "América Latina",
@@ -411,7 +411,7 @@ export default function Home() {
               { num: 7, suffix: " días", label: "De evento" },
               { num: 20, suffix: "+", label: "Speakers" },
               { num: 500, suffix: "+", label: "Asistentes esperados" },
-              { num: 5, suffix: "+", label: "Sedes en Montevideo" },
+              { num: 5, suffix: "+", label: "Sedes en Colonia, Montevideo y Punta del Este" },
             ].map((s, i) => (
               <div
                 key={i}
@@ -638,7 +638,7 @@ export default function Home() {
               {
                 icon: <Building2 size={22} />,
                 title: "Múltiples Sedes",
-                desc: "Distintos puntos de Montevideo albergarán los eventos durante los cinco días del evento.",
+                desc: "Distintos puntos de Colonia, Montevideo y Punta del Este albergarán los eventos durante los cinco días del evento.",
               },
             ].map((p, i) => (
               <FadeIn key={i} delay={i * 0.08}>
