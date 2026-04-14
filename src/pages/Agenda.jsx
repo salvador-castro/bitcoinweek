@@ -21,6 +21,22 @@ function FadeIn({ children, delay = 0 }) {
 
 const DAYS = [
   {
+    date: "20 Abr",
+    weekday: "Lunes",
+    theme: "Panel",
+    color: "#7B61FF",
+    events: [
+      {
+        time: "10:00",
+        title: "Letras On Chain",
+        type: "Panel",
+        venue: "Online · Biblioteca Cultural de Colonia del Sacramento",
+        speaker: "Ivan Kaleja — Bitcoin for Humanity (Uruguay)",
+        desc: "Presentación y conversatorio de autores sobre Bitcoin, el cambio de paradigma y las finanzas en el ámbito de la sociedad. Promoción de libros y educación sobre psicología financiera, proyectos y usos concretos de Bitcoin. Evento online. Duración: 2 hs. Transmisión online disponible.",
+      },
+    ],
+  },
+  {
     date: "21 May",
     weekday: "Jueves",
     theme: "Bienestar",
@@ -42,6 +58,14 @@ const DAYS = [
     theme: "Social",
     color: "#c47314",
     events: [
+      {
+        time: "12:00",
+        title: "Bitcoin Pizza Experience",
+        type: "Side event",
+        venue: "Montevideo, Ciudad Vieja · Calle Perez Castellano",
+        speaker: "Ivan Kaleja — Bitcoin 4 Humanity",
+        desc: "Una rampa de entrada interactiva al mundo Bitcoin: el gancho es la pizza gratis, que los participantes podrán adquirir solo si tienen una Wallet nativa de Bitcoin, la cual se les enseñará a usar en el sitio. Se entregarán satoshis para que puedan realizar su primera transacción de forma simbólica. Además, se integrarán los comercios gastronómicos de la Calle Perez Castellano dejándolos operativos para aceptar pagos en BTC de forma permanente. Duración: 5 hs. Transmisión online disponible.",
+      },
       {
         time: "19:30",
         title: "Wine & Bitcoin at Casa Lola",
