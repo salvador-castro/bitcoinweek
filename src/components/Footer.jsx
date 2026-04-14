@@ -235,7 +235,15 @@ export default function Footer() {
               fontFamily: "var(--font-mono)",
             }}
           >
-            Construido con ₿ por SalvaCastro
+            Construido con ₿ por{" "}
+            <a
+              href="https://salvadorcastro.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "inherit", textDecoration: "underline" }}
+            >
+              SalvaCastro
+            </a>
           </p>
         </div>
       </div>
