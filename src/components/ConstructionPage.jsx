@@ -359,7 +359,17 @@ const ConstructionPage = () => {
       </main>
 
       <div style={styles.bottomLine} />
-      <p style={styles.bottomNote}>© 2026 Bitcoin Week Montevideo</p>
+      <p style={styles.bottomNote}>
+        © 2026 Bitcoin Week Montevideo — desarrollado por{' '}
+        <a 
+          href="https://salvadorcastro.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}
+        >
+          salvaCastro
+        </a>
+      </p>
     </div>
   );
 };
