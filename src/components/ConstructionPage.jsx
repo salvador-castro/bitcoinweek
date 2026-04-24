@@ -365,7 +365,12 @@ const ConstructionPage = () => {
           href="https://salvadorcastro.vercel.app/" 
           target="_blank" 
           rel="noopener noreferrer" 
-          style={{ color: 'rgba(255,255,255,0.35)', textDecoration: 'none' }}
+          style={{ 
+            color: 'rgba(255,255,255,0.4)', 
+            textDecoration: 'underline',
+            cursor: 'pointer',
+            pointerEvents: 'auto'
+          }}
         >
           salvaCastro
         </a>
@@ -445,7 +450,7 @@ const styles = {
     color: 'rgba(255,255,255,0.18)',
     letterSpacing: '0.06em',
     margin: 0,
-    zIndex: 2,
+    zIndex: 10,
     whiteSpace: 'nowrap',
   },
   main: {
