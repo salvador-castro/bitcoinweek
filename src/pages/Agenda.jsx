@@ -21,22 +21,6 @@ function FadeIn({ children, delay = 0 }) {
 
 const DAYS = [
   {
-    date: "20 Abr",
-    weekday: "Lunes",
-    theme: "Panel",
-    color: "#7B61FF",
-    events: [
-      {
-        time: "10:00",
-        title: "Letras On Chain",
-        type: "Panel",
-        venue: "Online · Biblioteca Cultural de Colonia del Sacramento",
-        speaker: "Ivan Kaleja — Bitcoin for Humanity (Uruguay)",
-        desc: "Presentación y conversatorio de autores sobre Bitcoin, el cambio de paradigma y las finanzas en el ámbito de la sociedad. Promoción de libros y educación sobre psicología financiera, proyectos y usos concretos de Bitcoin. Evento online. Duración: 2 hs. Transmisión online disponible.",
-      },
-    ],
-  },
-  {
     date: "18 May",
     weekday: "Lunes",
     theme: "Workshop",
@@ -65,6 +49,22 @@ const DAYS = [
         venue: "Montevideo · Tiburcio Gómez 1329, oficina Criptala",
         speaker: "Juan Becerra — Criptala (Uruguay)",
         desc: "Juan Becerra presenta los fundamentos e hitos más importantes de Bitcoin. Dirigido a quienes recién se inician en cripto o quienes ya tienen conocimiento (ATP). Capacidad: 45 personas. Duración: 2 horas. Equipamiento: micrófono, proyector y WiFi.",
+      },
+    ],
+  },
+  {
+    date: "20 May",
+    weekday: "Lunes",
+    theme: "Panel",
+    color: "#7B61FF",
+    events: [
+      {
+        time: "10:00",
+        title: "Letras On Chain",
+        type: "Panel",
+        venue: "Online · Biblioteca Cultural de Colonia del Sacramento",
+        speaker: "Ivan Kaleja — Bitcoin for Humanity (Uruguay)",
+        desc: "Presentación y conversatorio de autores sobre Bitcoin, el cambio de paradigma y las finanzas en el ámbito de la sociedad. Promoción de libros y educación sobre psicología financiera, proyectos y usos concretos de Bitcoin. Evento online. Duración: 2 hs. Transmisión online disponible.",
       },
     ],
   },
