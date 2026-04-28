@@ -2,7 +2,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Twitter, Instagram, Youtube, Mail } from "lucide-react";
-import logo from "../assets/newLogo.png";
 
 const NAV = [
   { to: "/", label: "Inicio" },
@@ -73,7 +72,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src={logo}
+              src="/newLogo.png"
               alt="Bitcoin Week Uruguay"
               style={{ height: 38, marginBottom: 20 }}
             />

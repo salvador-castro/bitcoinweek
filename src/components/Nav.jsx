@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/newLogo.png";
 
 const LINKS = [
   { to: "/", label: "Inicio" },
@@ -52,7 +51,7 @@ export default function Nav() {
         >
           {/* Logo */}
           <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-            <img src={logo} alt="Bitcoin Week Uruguay" style={{ height: 34 }} />
+            <img src="/newLogo.png" alt="Bitcoin Week Uruguay" style={{ height: 34 }} />
           </Link>
 
           {/* Desktop nav */}
@@ -145,7 +144,7 @@ export default function Nav() {
               }}
             >
               <img
-                src={logo}
+                src="/newLogo.png"
                 alt="Bitcoin Week Uruguay"
                 style={{ height: 32 }}
               />
