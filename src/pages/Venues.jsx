@@ -22,73 +22,57 @@ function FadeIn({ children, delay = 0 }) {
 const VENUES = [
   {
     id: 1,
-    name: "Sede Principal",
-    area: "Ciudad Vieja",
-    address: "Por confirmar · Ciudad Vieja, Montevideo",
-    desc: "Sede principal del evento. Aquí se realizarán las keynotes y la ceremonia de apertura y cierre.",
-    days: ["Lunes 18", "Viernes 22"],
-    capacity: "200+",
-    lat: -34.9059,
-    lng: -56.2011,
-    color: "#F7931A",
-    type: "Principal",
-    mapQ: "Ciudad+Vieja+Montevideo+Uruguay",
+    name: "Puntabitcoin / Bemlocal",
+    event: "HUB Físico",
+    area: "Punta del Este",
+    city: "Punta del Este",
+    address: "Pedragosa Sierra y San Francisco, Punta del Este",
+    desc: "HUB físico Bitcoin en Punta del Este con capacidad para 50 personas. Incluye proyector, pantalla LED, sonido, micrófonos, WiFi, escenario, streaming y cabina técnica.",
+    days: ["Dom 18 de mayo"],
+    time: "14:00 – 21:00",
+    capacity: "50",
+    lat: -34.9649,
+    lng: -54.9533,
+    color: "#3B9EFF",
+    type: "HUB",
+    mapsUrl: "https://maps.app.goo.gl/vEuQBUxCvoNzPkm8A",
+    mapQ: "Pedragosa+Sierra+y+San+Francisco+Punta+del+Este+Uruguay",
   },
   {
     id: 2,
-    name: "Sede Técnica",
-    area: "Palermo",
-    address: "Por confirmar · Palermo, Montevideo",
-    desc: "Espacio dedicado a talleres técnicos, charlas sobre tecnología Bitcoin y workshops de Lightning Network.",
-    days: ["Martes 19"],
-    capacity: "80",
-    lat: -34.8995,
-    lng: -56.1804,
-    color: "#3B9EFF",
-    type: "Técnica",
-    mapQ: "Palermo+Montevideo+Uruguay",
+    name: "Club de Yachting Colonia",
+    event: "Bitcoin Wellness Day",
+    area: "Colonia del Sacramento",
+    city: "Colonia del Sacramento",
+    address: "Calle Santa Rita S/N, Colonia del Sacramento",
+    desc: "Jornada de bienestar y Bitcoin en el histórico Club de Yachting de Colonia. Capacidad para 50 personas, con internet de 100 Mb y espacio para sponsors, networking y catering.",
+    days: ["Jue 21 de mayo"],
+    time: "17:00 – 22:00",
+    capacity: "50",
+    lat: -34.474,
+    lng: -57.8431,
+    color: "#22C55E",
+    type: "Wellness",
+    mapsUrl: "https://maps.app.goo.gl/F8EgUTwoXM61UDEt9",
+    mapQ: "Calle+Santa+Rita+Colonia+del+Sacramento+Uruguay",
   },
   {
     id: 3,
-    name: "Sede Económica",
-    area: "Centro",
-    address: "Por confirmar · Centro, Montevideo",
-    desc: "Paneles y conversaciones sobre economía Bitcoin, regulación y el sistema financiero uruguayo.",
-    days: ["Miércoles 20"],
-    capacity: "120",
-    lat: -34.9061,
-    lng: -56.1895,
-    color: "#22C55E",
-    type: "Económica",
-    mapQ: "Centro+Montevideo+Uruguay",
-  },
-  {
-    id: 4,
-    name: "Sede Comunitaria",
-    area: "Cordón",
-    address: "Por confirmar · Cordón, Montevideo",
-    desc: "Meetups, encuentros de comunidad y el espacio para el público general.",
-    days: ["Jueves 21"],
+    name: "Victoria Plaza Office Tower",
+    event: "Bitcoin Space by Pizza DAO",
+    area: "Rooftop Piso 18 · Montevideo",
+    city: "Montevideo",
+    address: "Plaza Independencia 755, piso 18, Montevideo",
+    desc: "Evento de cierre en el rooftop del piso 18 del Victoria Plaza. Vistas panorámicas de Montevideo, capacidad para 100 personas y acceso al networking de la semana.",
+    days: ["Vie 22 de mayo"],
+    time: "19:00 – 22:00",
     capacity: "100",
-    lat: -34.9032,
-    lng: -56.1848,
-    color: "#EC4899",
-    type: "Comunitaria",
-    mapQ: "Cordon+Montevideo+Uruguay",
-  },
-  {
-    id: 5,
-    name: "Bitcoin Pizza Night",
-    area: "A confirmar",
-    address: "Por confirmar · Montevideo",
-    desc: "Celebración especial del Bitcoin Pizza Day. Evento social abierto a toda la comunidad.",
-    days: ["Jueves 21 (noche)"],
-    capacity: "150",
-    lat: -34.915,
-    lng: -56.165,
-    color: "#F97316",
+    lat: -34.9044,
+    lng: -56.1895,
+    color: "#F7931A",
     type: "Social",
-    mapQ: "Montevideo+Uruguay",
+    mapsUrl: "https://maps.app.goo.gl/fAtrJwHVbnJvfkrZ9",
+    mapQ: "Plaza+Independencia+755+Montevideo+Uruguay",
   },
 ];
 
@@ -132,8 +116,8 @@ export default function Venues() {
                 lineHeight: 1.8,
               }}
             >
-              Bitcoin Week Uruguay se distribuye por distintos puntos de
-              Montevideo. Cada sede tiene su propia personalidad y temática.
+              Bitcoin Week Uruguay se despliega por todo el país: Punta del Este,
+              Colonia del Sacramento y Montevideo. Tres sedes, tres experiencias.
             </p>
           </FadeIn>
         </div>
@@ -221,11 +205,22 @@ export default function Venues() {
                             fontSize: 20,
                             letterSpacing: "0.03em",
                             color: "var(--text-primary)",
-                            marginBottom: 4,
+                            marginBottom: 2,
                           }}
                         >
                           {venue.name}
                         </h3>
+                        <div
+                          style={{
+                            fontSize: 11,
+                            color: venue.color,
+                            fontFamily: "var(--font-mono)",
+                            letterSpacing: "0.06em",
+                            marginBottom: 4,
+                          }}
+                        >
+                          {venue.event}
+                        </div>
                         <div
                           style={{
                             display: "flex",
@@ -241,7 +236,7 @@ export default function Venues() {
                       </div>
                       {active === i && (
                         <motion.a
-                          href={`https://maps.google.com/?q=${venue.mapQ}`}
+                          href={venue.mapsUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           initial={{ opacity: 0 }}
@@ -304,7 +299,18 @@ export default function Venues() {
                               gap: 4,
                             }}
                           >
-                            <Clock size={10} /> Capacidad: {venue.capacity}
+                            <Clock size={10} /> {venue.time}
+                          </span>
+                          <span
+                            style={{
+                              fontSize: 11,
+                              color: "var(--text-muted)",
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 4,
+                            }}
+                          >
+                            Cap. {venue.capacity} personas
                           </span>
                         </div>
                       </motion.div>
@@ -348,7 +354,7 @@ export default function Venues() {
                           color: "var(--text-secondary)",
                         }}
                       >
-                        Montevideo, Uruguay
+                        Uruguay
                       </span>
                     </div>
                     <span
@@ -451,13 +457,25 @@ export default function Venues() {
                       style={{
                         fontFamily: "var(--font-display)",
                         fontSize: 18,
-                        marginBottom: 4,
+                        marginBottom: 2,
                         color: v.color,
                         letterSpacing: "0.04em",
                       }}
                     >
                       {v.name}
                     </h3>
+                    <div
+                      style={{
+                        fontSize: 10,
+                        fontFamily: "var(--font-mono)",
+                        color: "var(--text-muted)",
+                        letterSpacing: "0.1em",
+                        textTransform: "uppercase",
+                        marginBottom: 6,
+                      }}
+                    >
+                      {v.event}
+                    </div>
                     <p
                       style={{
                         color: "var(--text-secondary)",
@@ -469,7 +487,7 @@ export default function Venues() {
                       {v.address}
                     </p>
                     <a
-                      href={`https://maps.google.com/?q=${v.mapQ}`}
+                      href={v.mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-ghost"
@@ -548,7 +566,7 @@ export default function Venues() {
               className="tag"
               style={{ margin: "0 auto 14px", display: "inline-flex" }}
             >
-              <div className="tag-dot" /> Sedes en proceso de confirmación
+              <div className="tag-dot" /> Más sedes por anunciarse
             </div>
             <p
               style={{
@@ -558,8 +576,8 @@ export default function Venues() {
                 lineHeight: 1.7,
               }}
             >
-              Las ubicaciones exactas se confirmarán próximamente. Seguinos para
-              no perderte ningún anuncio.
+              Estas son las sedes confirmadas hasta ahora. Seguinos para no
+              perderte los próximos anuncios.
             </p>
           </FadeIn>
         </div>
