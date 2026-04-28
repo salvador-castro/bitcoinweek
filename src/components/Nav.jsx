@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/logoBitcoinWeek-Logo.png";
+import logo from "../assets/newLogo.png";
 
 const LINKS = [
   { to: "/", label: "Inicio" },

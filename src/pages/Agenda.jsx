@@ -54,7 +54,7 @@ const DAYS = [
   },
   {
     date: "20 May",
-    weekday: "Lunes",
+    weekday: "Miércoles",
     theme: "Panel",
     color: "#7B61FF",
     events: [

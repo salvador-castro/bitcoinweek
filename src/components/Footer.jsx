@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Twitter, Instagram, Youtube, Mail } from "lucide-react";
-import logo from "../assets/logoBitcoinWeek-Logo.png";
+import logo from "../assets/newLogo.png";
 
 const NAV = [
   { to: "/", label: "Inicio" },
