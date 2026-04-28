@@ -39,23 +39,7 @@ const DAYS = [
   {
     date: "20 May",
     weekday: "Miércoles",
-    theme: "Charla",
-    color: "#3B9EFF",
-    events: [
-      {
-        time: "18:30",
-        title: "Charla educativa sobre Bitcoin",
-        type: "Charla",
-        venue: "Montevideo · Tiburcio Gómez 1329, oficina Criptala",
-        speaker: "Juan Becerra — Criptala (Uruguay)",
-        desc: "Juan Becerra presenta los fundamentos e hitos más importantes de Bitcoin. Dirigido a quienes recién se inician en cripto o quienes ya tienen conocimiento (ATP). Capacidad: 45 personas. Duración: 2 horas. Equipamiento: micrófono, proyector y WiFi.",
-      },
-    ],
-  },
-  {
-    date: "20 May",
-    weekday: "Miércoles",
-    theme: "Panel",
+    theme: "Panel & Charla",
     color: "#7B61FF",
     events: [
       {
@@ -65,6 +49,14 @@ const DAYS = [
         venue: "Online · Biblioteca Cultural de Colonia del Sacramento",
         speaker: "Ivan Kaleja — Bitcoin for Humanity (Uruguay)",
         desc: "Presentación y conversatorio de autores sobre Bitcoin, el cambio de paradigma y las finanzas en el ámbito de la sociedad. Promoción de libros y educación sobre psicología financiera, proyectos y usos concretos de Bitcoin. Evento online. Duración: 2 hs. Transmisión online disponible.",
+      },
+      {
+        time: "18:30",
+        title: "Charla educativa sobre Bitcoin",
+        type: "Charla",
+        venue: "Montevideo · Tiburcio Gómez 1329, oficina Criptala",
+        speaker: "Juan Becerra — Criptala (Uruguay)",
+        desc: "Juan Becerra presenta los fundamentos e hitos más importantes de Bitcoin. Dirigido a quienes recién se inician en cripto o quienes ya tienen conocimiento (ATP). Capacidad: 45 personas. Duración: 2 horas. Equipamiento: micrófono, proyector y WiFi.",
       },
     ],
   },
