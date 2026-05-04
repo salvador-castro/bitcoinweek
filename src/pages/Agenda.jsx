@@ -91,6 +91,14 @@ const DAYS = [
         desc: "Feria para el aprendizaje e intercambio de valor de tus productos por satoshis. Aprende cómo recibir Bitcoins de forma fácil y segura. Dirigido a familias de emprendedores y comercios. Capacidad: 20 personas. Duración: 4 hs.",
       },
       {
+        time: "18:00",
+        title: "Global Pizza Party",
+        type: "Side event",
+        venue: "Colonia del Sacramento · Centro Cultural AFE",
+        speaker: "Pablo Perez",
+        desc: "¡Global Pizza Party por primera vez en Colonia del Sacramento, Uruguay! Celebra el Bitcoin Pizza Day con la comunidad. Únete a miles de personas en todo el mundo para conmemorar el Bitcoin Pizza Day. Cada 22 de mayo, la comunidad cripto recuerda la histórica compra de dos pizzas grandes en 2010, el primer uso conocido de dinero digital para una transacción en el mundo real. Sé parte de esta celebración mundial. Comparte, aprende y disfruta de la cena más famosa de la historia de internet. Actividad gratuita. Capacidad: 100 personas. Duración: 3 hs. Modalidad híbrida. Transmisión online disponible.",
+      },
+      {
         time: "19:00",
         title: "Bitcoin Space by Pizza DAO",
         type: "Side event",
@@ -140,11 +148,11 @@ const DAYS = [
     events: [
       {
         time: "15:00",
-        title: "Plugin 12 — Bitcoin Edition",
+        title: 'Be Orange "The Bitcoiners Meeting"',
         type: "Side event",
-        venue: "Montevideo · TBD",
-        speaker: "Maximiliano Pérez — Founder Plugin.uy",
-        desc: "Plugin integra en su grilla anual la narrativa Bitcoiner en su edición número 12. Un evento híbrido para conectar a la comunidad y magnificar el mensaje Bitcoin. Duración: 6 hs. Transmisión online disponible.",
+        venue: "Montevideo",
+        speaker: "Speakers por confirmar (2 o más) — @beorange.uy",
+        desc: "Es un encuentro que busca reunir a bitcoiners, empresas, startups, builders y actores institucionales en un mismo espacio para conversar, conectar y construir alrededor de Bitcoin. No está pensado como un evento masivo, sino como un punto de encuentro con criterio: una audiencia calificada, conversación de valor y foco en adopción, educación y posicionamiento dentro del ecosistema. Actividad gratuita. Capacidad: 300 personas. Duración: 6 hs. Modalidad híbrida. Transmisión online disponible.",
       },
     ],
   },
