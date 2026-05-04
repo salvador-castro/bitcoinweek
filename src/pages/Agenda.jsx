@@ -540,7 +540,7 @@ export default function Agenda() {
                 lineHeight: 1.7,
               }}
             >
-              El programa completo se anunciará en los próximos meses.
+              El programa completo se anunciará en los próximos días.
               Suscribite para recibir las novedades.
             </p>
           </FadeIn>
