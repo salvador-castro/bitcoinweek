@@ -67,7 +67,7 @@ const DAYS = [
     color: "#c47314",
     events: [
       {
-        time: "17:00",
+        time: "16:00",
         title: "Wellness Bitcoin Day",
         type: "Otro",
         venue: "Colonia del Sacramento · Club Yatching y Pesca",
