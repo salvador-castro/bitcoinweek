@@ -137,7 +137,7 @@ const LOCAL_TIERS = [
 
 const GLOBAL_TIERS = [
   {
-    tier: "MAIN SPONSOR",
+    tier: "SPONSOR",
     slots: 1,
     size: 2,
     logos: [{ src: criptalaLogo, alt: "Criptala" }],
@@ -871,91 +871,91 @@ export default function Home() {
 
           {/* LOCAL */}
           {SHOW_LOCAL_SPONSORS && (
-          <FadeIn delay={0.08}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 16,
-                marginBottom: 32,
-              }}
-            >
-              <div style={{ flex: 1, height: 1, background: "rgba(100,200,100,0.2)" }} />
-              <span
+            <FadeIn delay={0.08}>
+              <div
                 style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: 13,
-                  letterSpacing: "0.3em",
-                  color: "rgba(100,200,100,0.85)",
-                  textTransform: "uppercase",
-                  whiteSpace: "nowrap",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
+                  marginBottom: 32,
                 }}
               >
-                LOCAL
-              </span>
-              <div style={{ flex: 1, height: 1, background: "rgba(100,200,100,0.2)" }} />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 12,
-                marginBottom: 52,
-              }}
-            >
-              {LOCAL_TIERS.map((t, ti) => (
-                <div key={ti}>
-                  <p
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: 11,
-                      letterSpacing: "0.25em",
-                      color: "rgba(100,200,100,0.65)",
-                      textTransform: "uppercase",
-                      marginBottom: 10,
-                    }}
-                  >
-                    {t.tier}
-                  </p>
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: `repeat(${t.slots}, 1fr)`,
-                      gap: 10,
-                    }}
-                  >
-                    {Array.from({ length: t.slots }).map((_, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          border: "1px dashed rgba(100,200,100,0.2)",
-                          borderRadius: "var(--radius-md)",
-                          padding: t.size === 2 ? "44px 16px" : t.size === 1 ? "32px 16px" : "22px 12px",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontFamily: "var(--font-display)",
-                          fontSize: t.size === 2 ? 18 : t.size === 1 ? 14 : 11,
-                          letterSpacing: "0.08em",
-                          color: "rgba(100,200,100,0.25)",
-                          background: "rgba(100,200,100,0.02)",
-                          transition: "background 0.2s",
-                        }}
-                        onMouseEnter={(e) =>
-                          (e.currentTarget.style.background = "rgba(100,200,100,0.05)")
-                        }
-                        onMouseLeave={(e) =>
-                          (e.currentTarget.style.background = "rgba(100,200,100,0.02)")
-                        }
-                      >
-                        SPONSOR
-                      </div>
-                    ))}
+                <div style={{ flex: 1, height: 1, background: "rgba(100,200,100,0.2)" }} />
+                <span
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: 13,
+                    letterSpacing: "0.3em",
+                    color: "rgba(100,200,100,0.85)",
+                    textTransform: "uppercase",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  LOCAL
+                </span>
+                <div style={{ flex: 1, height: 1, background: "rgba(100,200,100,0.2)" }} />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 12,
+                  marginBottom: 52,
+                }}
+              >
+                {LOCAL_TIERS.map((t, ti) => (
+                  <div key={ti}>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-mono)",
+                        fontSize: 11,
+                        letterSpacing: "0.25em",
+                        color: "rgba(100,200,100,0.65)",
+                        textTransform: "uppercase",
+                        marginBottom: 10,
+                      }}
+                    >
+                      {t.tier}
+                    </p>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: `repeat(${t.slots}, 1fr)`,
+                        gap: 10,
+                      }}
+                    >
+                      {Array.from({ length: t.slots }).map((_, i) => (
+                        <div
+                          key={i}
+                          style={{
+                            border: "1px dashed rgba(100,200,100,0.2)",
+                            borderRadius: "var(--radius-md)",
+                            padding: t.size === 2 ? "44px 16px" : t.size === 1 ? "32px 16px" : "22px 12px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontFamily: "var(--font-display)",
+                            fontSize: t.size === 2 ? 18 : t.size === 1 ? 14 : 11,
+                            letterSpacing: "0.08em",
+                            color: "rgba(100,200,100,0.25)",
+                            background: "rgba(100,200,100,0.02)",
+                            transition: "background 0.2s",
+                          }}
+                          onMouseEnter={(e) =>
+                            (e.currentTarget.style.background = "rgba(100,200,100,0.05)")
+                          }
+                          onMouseLeave={(e) =>
+                            (e.currentTarget.style.background = "rgba(100,200,100,0.02)")
+                          }
+                        >
+                          SPONSOR
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
+                ))}
+              </div>
+            </FadeIn>
           )}
 
           <FadeIn>
