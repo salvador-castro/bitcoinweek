@@ -19,7 +19,7 @@ import CalendarButton from "../components/CalendarButton";
 
 /* ── Ecosystem logos ── */
 import bitcoin4Humanity from "../assets/logosEcosystem/bitcoin4Humanity/bitcoin4Humanity.png";
-import blockchainSummitGlobal from "../assets/logosEcosystem/blockchainSummitGlobal/blockchainSummitGlobalLogo.jpeg";
+import blockchainSummitGlobal from "../assets/logosEcosystem/blockchainSummitGlobal/blockchainSummitGlobalLogo.png";
 import camaraBlockchainUruguay from "../assets/logosEcosystem/camaraBlockchainUruguay/camaraBlockchainUruguayLogo.svg";
 import cryptoYa from "../assets/logosEcosystem/cryptoYa/cryptoYaLogo.png";
 import hashrate from "../assets/logosEcosystem/hashrate/hashrateLogo.png";
