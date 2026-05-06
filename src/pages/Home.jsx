@@ -17,6 +17,35 @@ import {
 import confetti from "canvas-confetti";
 import CalendarButton from "../components/CalendarButton";
 
+/* ── Ecosystem logos ── */
+import bitcoin4Humanity from "../assets/logosEcosystem/bitcoin4Humanity/bitcoin4Humanity.png";
+import blockchainSummitGlobal from "../assets/logosEcosystem/blockchainSummitGlobal/blockchainSummitGlobalLogo.jpeg";
+import camaraBlockchainUruguay from "../assets/logosEcosystem/camaraBlockchainUruguay/camaraBlockchainUruguayLogo.svg";
+import cryptoYa from "../assets/logosEcosystem/cryptoYa/cryptoYaLogo.png";
+import hashrate from "../assets/logosEcosystem/hashrate/hashrateLogo.png";
+import latamCriptoMom from "../assets/logosEcosystem/latamCriptoMom/latamCriptoMomLogo.png";
+import legaltechSolution from "../assets/logosEcosystem/legaltechSolution/legaltechSolutionLogo.png";
+import maldo from "../assets/logosEcosystem/maldo/maldoLogo.jpg";
+import nodoKi from "../assets/logosEcosystem/nodoKi/nodoKiLogo.png";
+import pluginAgency from "../assets/logosEcosystem/pluginAgency/pluginAgencyLogo.png";
+import puntaBitcoin from "../assets/logosEcosystem/puntaBitcoin/puntabitcoinLogo.png";
+import roderichs from "../assets/logosEcosystem/roderichs/roderichLogo.png";
+
+const ECOSYSTEM_LOGOS = [
+  { src: bitcoin4Humanity, alt: "Bitcoin 4 Humanity" },
+  { src: blockchainSummitGlobal, alt: "Blockchain Summit Global" },
+  { src: camaraBlockchainUruguay, alt: "Cámara Blockchain Uruguay" },
+  { src: cryptoYa, alt: "CryptoYa" },
+  { src: hashrate, alt: "Hashrate" },
+  { src: latamCriptoMom, alt: "Latam Cripto Mom" },
+  { src: legaltechSolution, alt: "Legaltech Solution" },
+  { src: maldo, alt: "Maldo" },
+  { src: nodoKi, alt: "Nodo Ki" },
+  { src: pluginAgency, alt: "Plugin Agency" },
+  { src: puntaBitcoin, alt: "Punta Bitcoin" },
+  { src: roderichs, alt: "Roderichs" },
+];
+
 /* ── Mailchimp JSONP ── */
 const MAILCHIMP_URL =
   "https://gmail.us12.list-manage.com/subscribe/post-json?u=88b29d5e90032b558d0f0fb95&id=0966db89bf&f_id=0009c4e1f0";
@@ -907,6 +936,49 @@ export default function Home() {
               </Link>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* ═══ ECOSYSTEM LOGOS MARQUEE ═════════════════════════════════ */}
+      <section
+        style={{
+          background: "var(--black)",
+          borderTop: "1px solid var(--border)",
+          borderBottom: "1px solid var(--border)",
+          padding: "56px 0",
+        }}
+      >
+        <div className="container" style={{ textAlign: "center", marginBottom: 32 }}>
+          <FadeIn>
+            <div
+              className="section-label"
+              style={{ justifyContent: "center" }}
+            >
+              Ecosistema
+            </div>
+            <h3
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: 12,
+                letterSpacing: "0.3em",
+                color: "var(--text-muted)",
+                textTransform: "uppercase",
+                marginTop: 8,
+              }}
+            >
+              Comunidad y aliados
+            </h3>
+          </FadeIn>
+        </div>
+
+        <div className="logos-marquee">
+          <div className="logos-track">
+            {[...ECOSYSTEM_LOGOS, ...ECOSYSTEM_LOGOS].map((logo, i) => (
+              <div className="logos-item" key={i}>
+                <img src={logo.src} alt={logo.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

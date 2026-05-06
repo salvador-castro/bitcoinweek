@@ -286,6 +286,71 @@ img {
 }
 
 /* ─────────────────────────────────────────
+   ECOSYSTEM LOGOS MARQUEE
+───────────────────────────────────────── */
+.logos-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 32px 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 80px,
+    #000 calc(100% - 80px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0,
+    #000 80px,
+    #000 calc(100% - 80px),
+    transparent 100%
+  );
+}
+
+.logos-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 64px;
+  animation: logos-scroll 40s linear infinite;
+}
+
+.logos-marquee:hover .logos-track {
+  animation-play-state: paused;
+}
+
+.logos-item {
+  flex-shrink: 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos-item img {
+  max-height: 100%;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.6);
+  opacity: 0.7;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logos-item img:hover {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+@keyframes logos-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─────────────────────────────────────────
    SCROLLBAR
 ───────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
