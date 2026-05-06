@@ -105,7 +105,7 @@ const DAYS = [
         venue: "Colonia del Sacramento · Centro Cultural AFE",
         speaker: "Pablo Perez",
         desc: "¡Global Pizza Party por primera vez en Colonia del Sacramento, Uruguay! Celebra el Bitcoin Pizza Day con la comunidad. Únete a miles de personas en todo el mundo para conmemorar el Bitcoin Pizza Day. Cada 22 de mayo, la comunidad cripto recuerda la histórica compra de dos pizzas grandes en 2010, el primer uso conocido de dinero digital para una transacción en el mundo real. Sé parte de esta celebración mundial. Comparte, aprende y disfruta de la cena más famosa de la historia de internet. Actividad gratuita. Capacidad: 100 personas. Duración: 3 hs. Modalidad híbrida. Transmisión online disponible.",
-      },
+      },/*
       {
         time: "19:00",
         title: "Bitcoin Space by Pizza DAO",
@@ -113,7 +113,7 @@ const DAYS = [
         venue: "Montevideo · Victoria Plaza Rooftop",
         speaker: "Lana Risso",
         desc: "Noche en el Rooftop del Victoria Plaza con excelente vista a la Presidencia: pizza gratis, trago gratis, subasta en Bitcoin de piezas únicas y Performance de Pintura en Vivo de un artista local. Ideal para completar tu primera transacción en Bitcoin. Apto para todo público. Capacidad: 70 personas. Duración: 3 hs. Transmisión online disponible.",
-      },
+      },*/
       {
         time: "19:00",
         title: "Puntabitcoin — Pizza Day",
