@@ -314,7 +314,7 @@ export default function Home() {
               }}
             >
               <motion.img
-                src="/newLogo.png"
+                src="/bitcoinWeekLogo.png"
                 alt="Bitcoin Week Uruguay"
                 animate={{ rotateY: [0, 360] }}
                 transition={{

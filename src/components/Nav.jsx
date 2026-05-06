@@ -51,7 +51,7 @@ export default function Nav() {
         >
           {/* Logo */}
           <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-            <img src="/newLogo.png" alt="Bitcoin Week Uruguay" style={{ height: 34 }} />
+            <img src="/bitcoinWeekLogo.png" alt="Bitcoin Week Uruguay" style={{ height: 34 }} />
           </Link>
 
           {/* Desktop nav */}
@@ -144,7 +144,7 @@ export default function Nav() {
               }}
             >
               <img
-                src="/newLogo.png"
+                src="/bitcoinWeekLogo.png"
                 alt="Bitcoin Week Uruguay"
                 style={{ height: 32 }}
               />

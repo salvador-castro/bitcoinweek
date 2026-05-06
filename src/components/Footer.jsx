@@ -72,7 +72,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img
-              src="/newLogo.png"
+              src="/bitcoinWeekLogo.png"
               alt="Bitcoin Week Uruguay"
               style={{ height: 38, marginBottom: 20 }}
             />
