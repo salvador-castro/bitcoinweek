@@ -89,7 +89,7 @@ const VENUES = [
     lng: -57.8425,
     color: "#F7931A",
     type: "Auditorio",
-    mapsUrl: "https://maps.app.goo.gl/FiuUNti5DbZyc3ux5",
+    mapsUrl: "https://maps.app.goo.gl/bYM6ziYKhgfTHGp78",
     mapQ: "Centro+Cultural+AFE+Colonia+del+Sacramento+Uruguay",
   },
 ];
