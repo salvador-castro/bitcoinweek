@@ -31,6 +31,9 @@ import pluginAgency from "../assets/logosEcosystem/pluginAgency/pluginAgencyLogo
 import puntaBitcoin from "../assets/logosEcosystem/puntaBitcoin/puntabitcoinLogo.png";
 import roderichs from "../assets/logosEcosystem/roderichs/roderichLogo.png";
 
+/* ── Sponsors logos ── */
+import criptalaLogo from "../assets/logosSponsors/principal/criptalaLogo.png";
+
 const ECOSYSTEM_LOGOS = [
   { src: bitcoin4Humanity, alt: "Bitcoin 4 Humanity" },
   { src: blockchainSummitGlobal, alt: "Blockchain Summit Global" },
@@ -131,7 +134,12 @@ const LOCAL_TIERS = [
 ];
 
 const GLOBAL_TIERS = [
-  { tier: "MAIN SPONSOR", slots: 1, size: 2 },
+  {
+    tier: "MAIN SPONSOR",
+    slots: 1,
+    size: 2,
+    logos: [{ src: criptalaLogo, alt: "Criptala" }],
+  },
   { tier: "LEADER", slots: 2, size: 1 },
   { tier: "BUILDER", slots: 2, size: 0 },
 ];
@@ -809,33 +817,50 @@ export default function Home() {
                       gap: 10,
                     }}
                   >
-                    {Array.from({ length: t.slots }).map((_, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          border: `1px dashed rgba(247,147,26,${t.size === 2 ? "0.5" : t.size === 1 ? "0.35" : "0.22"})`,
-                          borderRadius: "var(--radius-md)",
-                          padding: t.size === 2 ? "64px 24px" : t.size === 1 ? "48px 20px" : "36px 16px",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontFamily: "var(--font-display)",
-                          fontSize: t.size === 2 ? 26 : t.size === 1 ? 20 : 15,
-                          letterSpacing: "0.1em",
-                          color: `rgba(247,147,26,${t.size === 2 ? "0.6" : t.size === 1 ? "0.45" : "0.3"})`,
-                          background: `rgba(247,147,26,${t.size === 2 ? "0.04" : "0.02"})`,
-                          transition: "background 0.2s",
-                        }}
-                        onMouseEnter={(e) =>
-                          (e.currentTarget.style.background = `rgba(247,147,26,${t.size === 2 ? "0.09" : "0.05"})`)
-                        }
-                        onMouseLeave={(e) =>
-                          (e.currentTarget.style.background = `rgba(247,147,26,${t.size === 2 ? "0.04" : "0.02"})`)
-                        }
-                      >
-                        SPONSOR
-                      </div>
-                    ))}
+                    {Array.from({ length: t.slots }).map((_, i) => {
+                      const logo = t.logos?.[i];
+                      return (
+                        <div
+                          key={i}
+                          style={{
+                            border: `1px ${logo ? "solid" : "dashed"} rgba(247,147,26,${t.size === 2 ? "0.5" : t.size === 1 ? "0.35" : "0.22"})`,
+                            borderRadius: "var(--radius-md)",
+                            padding: t.size === 2 ? "64px 24px" : t.size === 1 ? "48px 20px" : "36px 16px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontFamily: "var(--font-display)",
+                            fontSize: t.size === 2 ? 26 : t.size === 1 ? 20 : 15,
+                            letterSpacing: "0.1em",
+                            color: `rgba(247,147,26,${t.size === 2 ? "0.6" : t.size === 1 ? "0.45" : "0.3"})`,
+                            background: `rgba(247,147,26,${t.size === 2 ? "0.04" : "0.02"})`,
+                            transition: "background 0.2s",
+                          }}
+                          onMouseEnter={(e) =>
+                            (e.currentTarget.style.background = `rgba(247,147,26,${t.size === 2 ? "0.09" : "0.05"})`)
+                          }
+                          onMouseLeave={(e) =>
+                            (e.currentTarget.style.background = `rgba(247,147,26,${t.size === 2 ? "0.04" : "0.02"})`)
+                          }
+                        >
+                          {logo ? (
+                            <img
+                              src={logo.src}
+                              alt={logo.alt}
+                              style={{
+                                maxWidth: "100%",
+                                maxHeight: t.size === 2 ? 140 : t.size === 1 ? 96 : 64,
+                                width: "auto",
+                                height: "auto",
+                                objectFit: "contain",
+                              }}
+                            />
+                          ) : (
+                            "SPONSOR"
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
