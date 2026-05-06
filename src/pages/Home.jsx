@@ -127,10 +127,12 @@ function Counter({ to, suffix = "" }) {
   );
 }
 
+const SHOW_LOCAL_SPONSORS = false;
+
 const LOCAL_TIERS = [
-  { tier: "PRO", slots: 2, size: 2 },
-  { tier: "GROWTH", slots: 3, size: 1 },
-  { tier: "ENTRY", slots: 4, size: 0 },
+  { tier: "PRO", slots: 2, size: 2, hidden: true },
+  { tier: "GROWTH", slots: 3, size: 1, hidden: true },
+  { tier: "ENTRY", slots: 4, size: 0, hidden: true },
 ];
 
 const GLOBAL_TIERS = [
@@ -140,8 +142,8 @@ const GLOBAL_TIERS = [
     size: 2,
     logos: [{ src: criptalaLogo, alt: "Criptala" }],
   },
-  { tier: "LEADER", slots: 2, size: 1 },
-  { tier: "BUILDER", slots: 2, size: 0 },
+  { tier: "LEADER", slots: 2, size: 1, hidden: true },
+  { tier: "BUILDER", slots: 2, size: 0, hidden: true },
 ];
 
 export default function Home() {
@@ -796,7 +798,7 @@ export default function Home() {
                 marginBottom: 52,
               }}
             >
-              {GLOBAL_TIERS.map((t, ti) => (
+              {GLOBAL_TIERS.filter((t) => !t.hidden).map((t, ti) => (
                 <div key={ti}>
                   <p
                     style={{
@@ -868,6 +870,7 @@ export default function Home() {
           </FadeIn>
 
           {/* LOCAL */}
+          {SHOW_LOCAL_SPONSORS && (
           <FadeIn delay={0.08}>
             <div
               style={{
@@ -953,6 +956,7 @@ export default function Home() {
               ))}
             </div>
           </FadeIn>
+          )}
 
           <FadeIn>
             <div style={{ textAlign: "center" }}>
