@@ -74,6 +74,24 @@ const VENUES = [
     mapsUrl: "https://maps.app.goo.gl/fAtrJwHVbnJvfkrZ9",
     mapQ: "Plaza+Independencia+755+Montevideo+Uruguay",
   },
+  {
+    id: 4,
+    name: "Centro Cultural AFE",
+    event: "Global Pizza Party",
+    area: "Colonia del Sacramento",
+    city: "Colonia del Sacramento",
+    address: "Arquitecto Miguel Angel Odriozola, Colonia del Sacramento",
+    desc: "Auditorio con capacidad para 250 personas (100 sentados / 150 parados). Cuenta con proyector, sonido, escenario y sillas. Internet de 100 Mb, espacio amplio para sponsors, networking y catering. Estacionamiento amplio y accesibilidad para personas con movilidad reducida.",
+    days: ["Vie 22 de mayo"],
+    time: "17:00 – 23:00",
+    capacity: "250",
+    lat: -34.4712,
+    lng: -57.8425,
+    color: "#F7931A",
+    type: "Auditorio",
+    mapsUrl: "https://maps.app.goo.gl/FiuUNti5DbZyc3ux5",
+    mapQ: "Centro+Cultural+AFE+Colonia+del+Sacramento+Uruguay",
+  },
 ];
 
 export default function Venues() {

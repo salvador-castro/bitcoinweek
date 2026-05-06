@@ -74,6 +74,14 @@ const DAYS = [
         speaker: "Pablo Daniel Perez y Lorena M Passini",
         desc: "Jornada de bienestar: Educación, armonización y nutrición. Educación sobre Bitcoin Week (@latamcriptomom), actividad de bienestar (@lorepassini), música armonizadora, alimentación saludable con merienda saludable y Networking con vistas del atardecer desde la terraza. Duración: 3 hs. Transmisión online disponible.",
       },
+      {
+        time: "17:00",
+        title: "Taller de Billeteras Bitcoin",
+        type: "Workshop",
+        venue: "Punta del Este · Puntabitcoin / Bemlocal",
+        speaker: "Nestor Rijo (Punta Bitcoin, Uruguay) y Rei Benitez (Punta Bitcoin, Cuba)",
+        desc: "Aprendé a usar Bitcoin de forma soberana. En este taller práctico vas a crear tu propia billetera, entender cómo enviar y recibir pagos, y dar tus primeros pasos en la autocustodia. Ideal para principiantes que quieren dejar de depender de terceros y empezar a usar Bitcoin en la vida real. Capacidad: 50 personas. Duración: 2 hs.",
+      },
     ],
   },
   {
