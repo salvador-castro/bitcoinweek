@@ -30,9 +30,10 @@ import nodoKi from "../assets/logosEcosystem/nodoKi/nodoKiLogo.png";
 import pluginAgency from "../assets/logosEcosystem/pluginAgency/pluginAgencyLogo.png";
 import puntaBitcoin from "../assets/logosEcosystem/puntaBitcoin/puntabitcoinLogo.png";
 import roderichs from "../assets/logosEcosystem/roderichs/roderichLogo.png";
+import criptala from "../assets/logosEcosystem/criptala/criptalaLogo.png";
 
 /* ── Sponsors logos ── */
-import criptalaLogo from "../assets/logosSponsors/principal/criptalaLogo.png";
+import bitnaria from "../assets/logosSponsors/principal/bitnariaLogo.png";
 
 const ECOSYSTEM_LOGOS = [
   { src: bitcoin4Humanity, alt: "Bitcoin 4 Humanity" },
@@ -47,6 +48,7 @@ const ECOSYSTEM_LOGOS = [
   { src: pluginAgency, alt: "Plugin Agency" },
   { src: puntaBitcoin, alt: "Punta Bitcoin" },
   { src: roderichs, alt: "Roderichs" },
+  { src: criptala, alt: "Criptala" }
 ];
 
 /* ── Mailchimp JSONP ── */
@@ -140,7 +142,7 @@ const GLOBAL_TIERS = [
     tier: "SPONSOR",
     slots: 1,
     size: 2,
-    logos: [{ src: criptalaLogo, alt: "Criptala" }],
+    logos: [{ src: bitnaria, alt: "Bitnaria" }],
   },
   { tier: "LEADER", slots: 2, size: 1, hidden: true },
   { tier: "BUILDER", slots: 2, size: 0, hidden: true },
