@@ -122,6 +122,14 @@ const DAYS = [
         speaker: "Nestor Rijo — @puntabitcoin",
         desc: "Celebración del Bitcoin Pizza Day: reunir a la comunidad y compartir un grato momento con charlas de Bitcoin y pizzas. Dirigido a la comunidad Bitcoin. Capacidad: 50 personas. Duración: 3 hs.",
       },
+      {
+        time: "19:00",
+        title: "Bitcoin Session #1",
+        type: "Panel",
+        venue: "Punta del Este · Pedragosa Sierra esq. San Francisco (Punta Bitcoin / Bemlocal)",
+        speaker: "Nestor Rijo (PuntaBitcoin), Cr. Gastón Negri (CriptosYA), Lic. Juan Pablo Silvera y Dr. José Pablo García",
+        desc: "Bitcoin Session #1 es un encuentro gratuito (con inscripción anticipada) organizado por CriptosYA, PuntaBitcoin y BemLocal. Un espacio para aprender, conectar y conversar sobre Bitcoin, nuevas economías y las oportunidades del ecosistema. Contará con charlas de especialistas, networking, regalos, catering y pizza. Actividad gratuita. Capacidad: 50 personas. Duración: 2 hs. Requiere inscripción anticipada.",
+      },
     ],
   },
   {
